@@ -67,56 +67,65 @@ FONTS=(
 )
 
 install_homebrew_apps() {
-  read -p "Do you want to install Homebrew apps? [y/n] " $install_homebrew_apps
+  read -p "Do you want to install Homebrew apps? [y/n] " install_homebrew_apps
 
   if [[ "$install_homebrew_apps" =~ ^[Yy]$ ]]; then
-    brew install --cask "${cask_apps[@]}"
-    brew install "${formula_apps[@]}"
-    brew install --cask "${fonts[@]}"
+    brew install --cask "${CASK_APPS[@]}"
+    brew install "${FORMULA_APPS[@]}"
+    brew install --cask "${FONTS[@]}"
 
   else
     echo "Skipping Homebrew apps installation."
-  
+
   fi
 }
 
-install_homebrew_on_mac(){
+install_homebrew_on_mac() {
+  echo "Installing Homebrew on macOS..."
+
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   eval "$(/opt/homebrew/bin/brew shellenv)"
-    
-  installing_apps
+
+  install_homebrew_apps
+
 }
 
-update_homebrew() {
-  read -p "Do you want to update Homebrew? [y/n] " $update_homebrew_apps
+install_homebrew_on_linux() {
+  echo "Installing Homebrew on Linux..."
+}
+
+update_and_upgrade_homebrew_apps() {
+  echo "Homebrew already installed."
+
+  read -p "Do you want to update Homebrew? [y/n] " update_homebrew_apps
 
   if [[ "$update_homebrew_apps" =~ ^[Yy]$ ]]; then
-    brew update -q
-    brew upgrade --g -q
+    brew update
+    brew upgrade -g -q
     brew cleanup -q
 
-  else 
+  else
     echo "Skipping Homebrew update."
 
   fi
+
+}
+main() {
+  if [[ -n "$BREW_OUTPUT" ]]; then
+    update_and_upgrade_homebrew_apps
+
+  else
+    echo "Homebrew is not installed. Installing..."
+
+    if [[ "$SYSTEM" == "Darwin" ]]; then
+      install_homebrew_on_mac
+
+    elif [[ "$SYSTEM" == "Linux" ]]; then
+      install_homebrew_on_linux
+
+    fi
+  fi
+
 }
 
-if [[ -n "$BREW_OUTPUT" ]]; then
-  echo "Homebrew already installed."
-
-  update_homebrew
-
-else 
-  echo "Homebrew is not installed. Installing..."
-
-  if [[ "$SYSTEM" == "Darwin" ]]; then
-    echo "Installing Homebrew on macOS..."
-
-    install_homebrew_on_mac
-  
-  elif [[ "$SYSTEM" == "Linux" ]]; then
-    echo "Installing Homebrew on Linux..."
-    
-  fi
-fi 
-
+main
