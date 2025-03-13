@@ -65,33 +65,19 @@ FONTS=(
   "font-roboto"
   "font-source-code-pro"
 )
-
+############# Homebrew ###############
 install_homebrew_apps() {
   read -p "Do you want to install Homebrew apps? [y/n] " install_homebrew_apps
 
   if [[ "$install_homebrew_apps" =~ ^[Yy]$ ]]; then
     brew install --cask "${CASK_APPS[@]}"
     brew install "${FORMULA_APPS[@]}"
-    brew install --cask "${FONTS[@]}"
+    brew install --cask --no-quarantine "${FONTS[@]}"
 
   else
     echo "Skipping Homebrew apps installation."
 
   fi
-}
-
-install_homebrew_on_mac() {
-  echo "Installing Homebrew on macOS..."
-
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-
-  install_homebrew_apps
-
-}
-
-install_homebrew_on_linux() {
-  echo "Installing Homebrew on Linux..."
 }
 
 update_and_upgrade_homebrew_apps() {
@@ -110,7 +96,22 @@ update_and_upgrade_homebrew_apps() {
   fi
 
 }
-main() {
+
+install_homebrew_on_mac() {
+  echo "Installing Homebrew on macOS..."
+
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  install_homebrew_apps
+
+}
+
+install_homebrew_on_linux() {
+  echo "Installing Homebrew on Linux..."
+}
+
+install_homebrew() {
   if [[ -n "$BREW_OUTPUT" ]]; then
     update_and_upgrade_homebrew_apps
 
@@ -127,5 +128,12 @@ main() {
   fi
 
 }
+########################################
+
+# Main functions that contains setup steps
+main() {
+  install_homebrew
+}
+########################################
 
 main
