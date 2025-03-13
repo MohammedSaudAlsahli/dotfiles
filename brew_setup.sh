@@ -5,6 +5,13 @@ HARDWARE=$(uname -m)
 
 BREW_OUTPUT=$(brew --version 2>/dev/null)
 
+MAS_APPS=(
+  "937984704"
+  "497799835"
+  "409201541"
+  "409203825"
+
+)
 CASK_APPS=(
   "1password"
   "alacritty"
@@ -29,6 +36,7 @@ CASK_APPS=(
 )
 
 FORMULA_APPS=(
+  "mas"
   "bat"
   "eza"
   "fzf"
@@ -45,8 +53,9 @@ FORMULA_APPS=(
   "openssl"
   "pandoc"
   "vite"
-  "curl"
+  "httpie"
   "wget"
+  "curl"
   "uv"
   "rust"
   "zsh-autocomplete"
@@ -54,6 +63,7 @@ FORMULA_APPS=(
   "zsh-syntax-highlighting"
   "yt-dlp"
   "powerlevel10k"
+  "tmux"
   "stow"
 )
 
@@ -65,12 +75,13 @@ FONTS=(
   "font-roboto"
   "font-source-code-pro"
 )
+
 ############# Homebrew ###############
 install_homebrew_apps() {
   read -p "Do you want to install Homebrew apps? [y/n] " install_homebrew_apps
 
   if [[ "$install_homebrew_apps" =~ ^[Yy]$ ]]; then
-    brew install --cask "${CASK_APPS[@]}"
+    brew install --cask --no-quarantine "${CASK_APPS[@]}"
     brew install "${FORMULA_APPS[@]}"
     brew install --cask --no-quarantine "${FONTS[@]}"
 
@@ -104,6 +115,8 @@ install_homebrew_on_mac() {
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
   install_homebrew_apps
+
+  mas install "${MAS_APPS[@]}"
 
 }
 
