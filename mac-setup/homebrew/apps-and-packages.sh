@@ -1,0 +1,71 @@
+#!/usr/bin/env zsh
+
+MAS_APPS=(
+    "937984704"
+    "497799835"
+    "409201541"
+    "409203825"
+
+)
+CASK_APPS=(
+    "1password"
+    "alacritty"
+    "alt-tab"
+    "appcleaner"
+    "betterdisplay"
+    "brave-browser"
+    "clop"
+    "docker"
+    "get-api"
+    "hot"
+    "kdenlive"
+    "keyclu"
+    "ledger-live"
+    "visual-studio-code"
+    "tableplus"
+    "stremio"
+    "raycast"
+    "qbittorrent"
+    "obsidian"
+    "mounty"
+)
+
+FORMULA_APPS=(
+    "mas"
+    "bat"
+    "lsd"
+    "fzf"
+    "ffmpeg"
+    "tlrc"
+    "tree"
+    "htop"
+    "n"
+    "neovim"
+    "nano"
+    "lua"
+    "openssh"
+    "openssl"
+    "pandoc"
+    "vite"
+    "httpie"
+    "wget"
+    "curl"
+    "uv"
+    "rust"
+    "zsh-autocomplete"
+    "zsh-autosuggestions"
+    "zsh-syntax-highlighting"
+    "yt-dlp"
+    "powerlevel10k"
+    "tmux"
+    "stow"
+)
+
+FONTS=(
+    "font-fira-code"
+    "font-jetbrains-mono"
+    "font-jetbrains-mono-nerd-font"
+    "font-meslo-lg-nerd-font"
+    "font-roboto"
+    "font-source-code-pro"
+)
