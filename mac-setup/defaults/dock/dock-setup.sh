@@ -1,32 +1,45 @@
 #!/usr/bin/env zsh
 
-# Disable app launch animations.
-defaults write com.apple.dock launchanim -bool false
+# Function to configure Dock defaults
+configure_dock_defaults() {
+    echo "⚙️ Configuring Dock defaults..."
 
-# Set minimize effect to "genie".
-defaults write com.apple.dock mineffect -string "genie"
+    # Disable app launch animations.
+    defaults write com.apple.dock launchanim -bool false
+    echo "✅ Disabled app launch animations."
 
-# Minimize windows into app icons.
-defaults write com.apple.dock minimize-to-application -bool true
+    # Set minimize effect to "genie".
+    defaults write com.apple.dock mineffect -string "genie"
+    echo "✅ Set minimize effect to 'genie'."
 
-# Move Dock to the left side of the screen.
-defaults write com.apple.dock orientation -string "left"
+    # Minimize windows into app icons.
+    defaults write com.apple.dock minimize-to-application -bool true
+    echo "✅ Enabled minimizing windows into app icons."
 
-# Show indicators for running apps.
-defaults write com.apple.dock show-process-indicators -bool true
+    # Move Dock to the left side of the screen.
+    defaults write com.apple.dock orientation -string "left"
+    echo "✅ Moved Dock to the left side of the screen."
 
-# Hide "Recent Applications" in the Dock.
-defaults write com.apple.dock show-recents -bool false
+    # Show indicators for running apps.
+    defaults write com.apple.dock show-process-indicators -bool true
+    echo "✅ Enabled indicators for running apps."
 
-# Disable "Show Desktop" gesture.
-defaults write com.apple.dock showDesktopGestureEnabled -bool false
+    # Hide "Recent Applications" in the Dock.
+    defaults write com.apple.dock show-recents -bool false
+    echo "✅ Hidden 'Recent Applications' in the Dock."
 
-# Disable "Launchpad" gesture.
-defaults write com.apple.dock showLaunchpadGestureEnabled -bool false
+    # Disable "Show Desktop" gesture.
+    defaults write com.apple.dock showDesktopGestureEnabled -bool false
+    echo "✅ Disabled 'Show Desktop' gesture."
 
-# Set Dock icon size to 40 pixels.
-defaults write com.apple.dock tilesize -int 40
+    # Disable "Launchpad" gesture.
+    defaults write com.apple.dock showLaunchpadGestureEnabled -bool false
+    echo "✅ Disabled 'Launchpad' gesture."
 
+    # Set Dock icon size to 40 pixels.
+    defaults write com.apple.dock tilesize -int 40
+    echo "✅ Set Dock icon size to 40 pixels."
+}
 
 # Function to add apps to the Dock
 add_apps_to_dock() {
@@ -86,4 +99,20 @@ add_apps_to_dock() {
     done
 
     echo "🎉 Dock configuration updated successfully!"
+}
+
+# Main function to setup the Dock
+dock_setup() {
+    echo "🚀 Starting Dock setup..."
+
+    # Configure Dock defaults
+    configure_dock_defaults
+
+    # Add apps to the Dock
+    add_apps_to_dock
+
+    # Restart the Dock to apply changes
+    echo "🔄 Restarting Dock..."
+    killall Dock
+    echo "🎉 Dock setup completed successfully!"
 }
