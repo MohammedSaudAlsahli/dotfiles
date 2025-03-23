@@ -45,14 +45,8 @@ configure_dock_defaults() {
 add_apps_to_dock() {
     local DOCK_PLIST="$HOME/Library/Preferences/com.apple.dock.plist"
 
-    # Source the dock-apps.sh file to load the DOCK_APPS array
-    if [[ -f "dock-apps.sh" ]]; then
-        source "dock-apps.sh"
-        echo "✅ Loaded app list from 'dock-apps.sh'."
-    else
-        echo "❌ Error: Missing 'dock-apps.sh' file. Exiting."
-        exit 1
-    fi
+    SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+    source "$SCRIPT_DIR/dock-apps.sh"
 
     # Function to add a single app to the Dock
     add_app_to_dock() {
@@ -116,3 +110,5 @@ dock_setup() {
     killall Dock
     echo "🎉 Dock setup completed successfully!"
 }
+
+dock_setup
