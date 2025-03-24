@@ -1,0 +1,174 @@
+2024-10-05 15:38:12 waveterm-app starting, WAVETERM_HOME=/Users/mohammedalsahli/.waveterm, electronpath=/Applications/Wave.app/Contents/Resources/app.asar/dist gopath=/Applications/Wave.app/Contents/Resources/app.asar.unpacked/dist arch=darwin/arm64
+2024-10-05 15:38:12 trying to run local server /Applications/Wave.app/Contents/Resources/app.asar.unpacked/dist/bin/wavesrv.arm64
+2024-10-05 15:38:12 spawned wavesrv
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.472863 [base] acquiring lock on /Users/mohammedalsahli/.waveterm/wave.lock
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.473585 wave version: 0.8.8 (202410012200)
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.473590 wave home dir: /Users/mohammedalsahli/.waveterm
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.473612 [db] opening db /Users/mohammedalsahli/.waveterm/db/filestore.db
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.474211 migrate filestore
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.484649 [db] filestore migration done, version 0 -> 1
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.485155 filestore initialized
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.485173 migrate wstore
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.487128 [db] wstore migration done, version 0 -> 4
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.487144 wstore initialized
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.489027 initializing wsh and shell startup files
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.489472 clientid: d33efd76-e501-4b36-81b1-6b4e008b59c7
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.499140 [router] registering wsh route "wavesrv"
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.499169 [router] registering wsh route "conn:local"
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.500193 wsh binary successfully "wsh-0.8.8-darwin.arm64" copied to "/Users/mohammedalsahli/.waveterm/bin/wsh"
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.507110 starting file watcher
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.511344 Server [web] listening on 127.0.0.1:52262
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.511370 Server [websocket] listening on 127.0.0.1:52263
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.511510 Server [unix-domain] listening on /Users/mohammedalsahli/.waveterm/wave.sock
+2024-10-05 15:38:12 [wavesrv] 2024/10/05 15:38:12.512736 Running websocket server on 127.0.0.1:52263
+2024-10-05 15:38:12 wavesrv ready signal received true 223 ms
+2024-10-05 15:38:12 [service] client.GetClientData | 81ms
+2024-10-05 15:38:12 [service] file.GetFullConfig | 3ms
+2024-10-05 15:38:12 [service] object.GetObject window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 | 5ms
+2024-10-05 15:38:12 running as file
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.253783 New websocket connection: windowid:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 connid:e4f019d0-482a-4bf0-8e69-79c19bb2f5e3
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.253803 [router] registering wsh route "window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3"
+2024-10-05 15:38:13 show cfc02ff7-5f7b-4e84-a449-cacdc4689fa3
+2024-10-05 15:38:13 Configuring updater
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.278248 EventSubCommand: {config [] true}
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.278267 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 config
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.278299 EventSubCommand: {waveobj:update [] true}
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.278302 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 waveobj:update
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.278423 EventSubCommand: {connchange [] true}
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.278426 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 connchange
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.278450 EventSubCommand: {userinput [] true}
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.278455 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 userinput
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.278479 EventSubCommand: {blockfile [] true}
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.278484 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 blockfile
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.285350 New websocket connection: windowid:electron connid:4c5f5d92-d897-4c8d-86fe-2dcf92df590e
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.285407 [router] registering wsh route "electron"
+2024-10-05 15:38:13 [service] file.GetFullConfig | 11ms
+2024-10-05 15:38:13 Update check interval in milliseconds: 3600000
+2024-10-05 15:38:13 Update check enabled: true
+2024-10-05 15:38:13 Install update on quit: true
+2024-10-05 15:38:13 Updater config from binary: {
+  provider: 'generic',
+  url: 'https://dl.waveterm.dev/releases-w2',
+  updaterCacheDirName: 'waveterm-updater'
+}
+2024-10-05 15:38:13 Update channel setting does not exist, setting to value from updater config.
+2024-10-05 15:38:13 Update channel: latest
+2024-10-05 15:38:13 starting updater
+2024-10-05 15:38:13 checking-for-update
+2024-10-05 15:38:13 [wavesrv] 2024/10/05 15:38:13.300785 SETCONFIG: {map[autoupdate:channel:latest]}
+2024-10-05 15:38:13 update-not-available
+2024-10-05 15:38:18 [wavesrv] 2024/10/05 15:38:18.799986 [wcloud] sending request POST https://api.waveterm.dev/central/no-telemetry
+2024-10-05 15:38:19 [wavesrv] 2024/10/05 15:38:19.784234 ApplyPortableLayout, tabId: dffddf55-d1bc-49e1-852d-02a45a0c9bab, layout: [{[0] <nil> 0x14000540f40 true} {[1] <nil> 0x14000540f50 false} {[1 1] <nil> 0x14000540f60 false} {[1 2] <nil> 0x14000540f70 false} {[2] <nil> 0x14000540f80 false} {[2 1] <nil> 0x14000540f90 false} {[2 2] <nil> 0x14000540fa0 false}]
+2024-10-05 15:38:19 [wavesrv] 2024/10/05 15:38:19.953924 EventSubCommand: {sysinfo [local] false}
+2024-10-05 15:38:19 [wavesrv] 2024/10/05 15:38:19.953954 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 sysinfo
+2024-10-05 15:38:19 [wavesrv] 2024/10/05 15:38:19.954478 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a] false}
+2024-10-05 15:38:19 [wavesrv] 2024/10/05 15:38:19.954487 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:38:20 [wavesrv] 2024/10/05 15:38:20.054627 start blockcontroller 03013e6d-1bf0-4b12-b431-53763cbe7d7a "shell" ("")
+2024-10-05 15:38:20 [wavesrv] 2024/10/05 15:38:20.054716 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"03013e6d-1bf0-4b12-b431-53763cbe7d7a", ShellProcStatus:"done", ShellProcConnName:""}
+2024-10-05 15:38:20 [wavesrv] 2024/10/05 15:38:20.055002 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a] false}
+2024-10-05 15:38:20 [wavesrv] 2024/10/05 15:38:20.055007 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:38:20 [wavesrv] 2024/10/05 15:38:20.055725 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a] false}
+2024-10-05 15:38:20 [wavesrv] 2024/10/05 15:38:20.055733 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:38:20 [wavesrv] 2024/10/05 15:38:20.117788 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"03013e6d-1bf0-4b12-b431-53763cbe7d7a", ShellProcStatus:"running", ShellProcConnName:""}
+2024-10-05 15:38:20 [wavesrv] 2024/10/05 15:38:20.117939 [router] registering wsh route "controller:03013e6d-1bf0-4b12-b431-53763cbe7d7a"
+2024-10-05 15:38:22 [wavesrv] 2024/10/05 15:38:22.492774 filestore flush: 1/1 entries flushed, err:<nil>
+2024-10-05 15:38:22 [wavesrv] 2024/10/05 15:38:22.507161 telemetry disabled, not sending
+2024-10-05 15:38:29 [wavesrv] 2024/10/05 15:38:29.532412 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:afa6e372-ae99-4dfc-a201-30e3f70a1dad] false}
+2024-10-05 15:38:29 [wavesrv] 2024/10/05 15:38:29.532458 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:38:29 [wavesrv] 2024/10/05 15:38:29.558686 start blockcontroller afa6e372-ae99-4dfc-a201-30e3f70a1dad "shell" ("")
+2024-10-05 15:38:29 [wavesrv] 2024/10/05 15:38:29.558861 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:afa6e372-ae99-4dfc-a201-30e3f70a1dad block:afa6e372-ae99-4dfc-a201-30e3f70a1dad] false}
+2024-10-05 15:38:29 [wavesrv] 2024/10/05 15:38:29.558900 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:38:29 [wavesrv] 2024/10/05 15:38:29.558958 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"afa6e372-ae99-4dfc-a201-30e3f70a1dad", ShellProcStatus:"done", ShellProcConnName:""}
+2024-10-05 15:38:29 [wavesrv] 2024/10/05 15:38:29.559195 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:afa6e372-ae99-4dfc-a201-30e3f70a1dad block:afa6e372-ae99-4dfc-a201-30e3f70a1dad block:afa6e372-ae99-4dfc-a201-30e3f70a1dad] false}
+2024-10-05 15:38:29 [wavesrv] 2024/10/05 15:38:29.559212 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:38:29 [wavesrv] 2024/10/05 15:38:29.562181 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"afa6e372-ae99-4dfc-a201-30e3f70a1dad", ShellProcStatus:"running", ShellProcConnName:""}
+2024-10-05 15:38:29 [wavesrv] 2024/10/05 15:38:29.562277 [router] registering wsh route "controller:afa6e372-ae99-4dfc-a201-30e3f70a1dad"
+2024-10-05 15:38:30 [wavesrv] 2024/10/05 15:38:30.184849 SETTERMSIZE: 55x54
+2024-10-05 15:38:30 [wavesrv] 2024/10/05 15:38:30.487856 SETTERMSIZE: 55x42
+2024-10-05 15:38:30 [wavesrv] 2024/10/05 15:38:30.496452 SETTERMSIZE: 55x42
+2024-10-05 15:38:32 [wavesrv] 2024/10/05 15:38:32.495520 filestore flush: 2/2 entries flushed, err:<nil>
+2024-10-05 15:38:33 webview-focus 3
+2024-10-05 15:38:38 webview-focus null
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.038934 error appending to blockfile: error appending to blockfile: file does not exist
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.040078 error appending to blockfile: error appending to blockfile: file does not exist
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.040276 error appending to blockfile: error appending to blockfile: file does not exist
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.041783 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:afa6e372-ae99-4dfc-a201-30e3f70a1dad block:afa6e372-ae99-4dfc-a201-30e3f70a1dad] false}
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.041816 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.045367 error appending to blockfile: error appending to blockfile: file does not exist
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.046669 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:afa6e372-ae99-4dfc-a201-30e3f70a1dad] false}
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.046687 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.046873 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a] false}
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.046885 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.067415 error appending to blockfile: error appending to blockfile: file does not exist
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.067834 error appending to blockfile: error appending to blockfile: file does not exist
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.068209 error appending to blockfile: error appending to blockfile: file does not exist
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.254880 SETTERMSIZE: 55x54
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.440840 [shellproc] pty-read loop done
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.440839 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"afa6e372-ae99-4dfc-a201-30e3f70a1dad", ShellProcStatus:"done", ShellProcConnName:""}
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.441021 [router] unregistering wsh route "controller:afa6e372-ae99-4dfc-a201-30e3f70a1dad"
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.441035 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"afa6e372-ae99-4dfc-a201-30e3f70a1dad", ShellProcStatus:"done", ShellProcConnName:""}
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.441049 [shellproc] shell process wait loop done
+2024-10-05 15:38:39 [wavesrv] 2024/10/05 15:38:39.541272 [shellproc] shellInputCh loop done
+2024-10-05 15:38:42 [wavesrv] 2024/10/05 15:38:42.498422 filestore flush: 1/1 entries flushed, err:<nil>
+2024-10-05 15:38:56 [wavesrv] 2024/10/05 15:38:56.556813 sending ai chat message to waveterm default endpoint with openai
+2024-10-05 15:39:11 [wavesrv] 2024/10/05 15:39:11.254760 sending ai chat message to waveterm default endpoint with openai
+2024-10-05 15:39:33 [wavesrv] 2024/10/05 15:39:33.654265 EventSubCommand: {sysinfo [local local] false}
+2024-10-05 15:39:33 [wavesrv] 2024/10/05 15:39:33.654285 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 sysinfo
+2024-10-05 15:39:33 [wavesrv] 2024/10/05 15:39:33.941410 SETTERMSIZE: 55x42
+2024-10-05 15:39:37 [wavesrv] 2024/10/05 15:39:37.508453 filestore flush: 1/1 entries flushed, err:<nil>
+2024-10-05 15:39:45 [wavesrv] 2024/10/05 15:39:45.321443 SETTERMSIZE: 55x54
+2024-10-05 15:39:46 [wavesrv] 2024/10/05 15:39:46.752377 SETTERMSIZE: 55x73
+2024-10-05 15:39:47 [wavesrv] 2024/10/05 15:39:47.511762 filestore flush: 1/1 entries flushed, err:<nil>
+2024-10-05 15:39:47 [wavesrv] 2024/10/05 15:39:47.544785 EventSubCommand: {sysinfo [local] false}
+2024-10-05 15:39:47 [wavesrv] 2024/10/05 15:39:47.544828 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 sysinfo
+2024-10-05 15:39:47 [wavesrv] 2024/10/05 15:39:47.753377 SETTERMSIZE: 55x111
+2024-10-05 15:39:48 [wavesrv] 2024/10/05 15:39:48.805256 [wps] unsub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 sysinfo
+2024-10-05 15:39:49 [wavesrv] 2024/10/05 15:39:49.025172 SETTERMSIZE: 55x227
+2024-10-05 15:39:52 [wavesrv] 2024/10/05 15:39:52.514911 filestore flush: 1/1 entries flushed, err:<nil>
+2024-10-05 15:39:55 [wavesrv] 2024/10/05 15:39:55.820787 SETTERMSIZE: 68x253
+2024-10-05 15:39:56 WaveObj updated window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3
+2024-10-05 15:39:56 [service] window.SetWindowPosAndSize | 12ms
+2024-10-05 15:39:56 [service] object.GetObject window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 | 7ms
+2024-10-05 15:39:56 WaveObj resolved window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 7ms
+2024-10-05 15:39:56 WaveObj updated window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3
+2024-10-05 15:39:56 [service] window.SetWindowPosAndSize | 6ms
+2024-10-05 15:39:57 [wavesrv] 2024/10/05 15:39:57.516147 filestore flush: 1/1 entries flushed, err:<nil>
+2024-10-05 15:40:02 [wavesrv] 2024/10/05 15:40:02.518219 filestore flush: 1/1 entries flushed, err:<nil>
+2024-10-05 15:40:07 [wavesrv] 2024/10/05 15:40:07.520959 filestore flush: 2/2 entries flushed, err:<nil>
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.579052 ApplyPortableLayout, tabId: bdea61fa-49f1-485d-8b0f-b1c8c389253d, layout: [{[0] <nil> 0x14000394cd0 true}]
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.594515 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a block:03013e6d-1bf0-4b12-b431-53763cbe7d7a] false}
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.594549 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.597142 EventSubCommand: {controllerstatus [block:03013e6d-1bf0-4b12-b431-53763cbe7d7a] false}
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.597162 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.597328 [wps] unsub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.604110 EventSubCommand: {controllerstatus [block:5d2b698f-6fa4-489b-bb26-16f9dd6c6b54] false}
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.604129 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.626670 start blockcontroller 5d2b698f-6fa4-489b-bb26-16f9dd6c6b54 "shell" ("")
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.626790 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"5d2b698f-6fa4-489b-bb26-16f9dd6c6b54", ShellProcStatus:"done", ShellProcConnName:""}
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.628996 EventSubCommand: {controllerstatus [block:5d2b698f-6fa4-489b-bb26-16f9dd6c6b54 block:5d2b698f-6fa4-489b-bb26-16f9dd6c6b54 block:5d2b698f-6fa4-489b-bb26-16f9dd6c6b54] false}
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.629009 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.630793 EventSubCommand: {controllerstatus [block:5d2b698f-6fa4-489b-bb26-16f9dd6c6b54 block:5d2b698f-6fa4-489b-bb26-16f9dd6c6b54] false}
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.630816 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.648523 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"5d2b698f-6fa4-489b-bb26-16f9dd6c6b54", ShellProcStatus:"running", ShellProcConnName:""}
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.648639 [router] registering wsh route "controller:5d2b698f-6fa4-489b-bb26-16f9dd6c6b54"
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.702545 EventSubCommand: {controllerstatus [block:5d2b698f-6fa4-489b-bb26-16f9dd6c6b54 block:5d2b698f-6fa4-489b-bb26-16f9dd6c6b54] false}
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.702559 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.703537 EventSubCommand: {controllerstatus [block:5d2b698f-6fa4-489b-bb26-16f9dd6c6b54] false}
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.703547 [wps] sub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:40:18 [wavesrv] 2024/10/05 15:40:18.703637 [wps] unsub window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3 controllerstatus
+2024-10-05 15:40:19 [wavesrv] 2024/10/05 15:40:19.214965 error appending to blockfile: error appending to blockfile: file does not exist
+2024-10-05 15:40:19 [wavesrv] 2024/10/05 15:40:19.215152 error appending to blockfile: error appending to blockfile: file does not exist
+2024-10-05 15:40:19 [wavesrv] 2024/10/05 15:40:19.215350 error appending to blockfile: error appending to blockfile: file does not exist
+2024-10-05 15:40:19 [wavesrv] 2024/10/05 15:40:19.605177 [shellproc] pty-read loop done
+2024-10-05 15:40:19 [wavesrv] 2024/10/05 15:40:19.605242 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"03013e6d-1bf0-4b12-b431-53763cbe7d7a", ShellProcStatus:"done", ShellProcConnName:""}
+2024-10-05 15:40:19 [wavesrv] 2024/10/05 15:40:19.605246 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"03013e6d-1bf0-4b12-b431-53763cbe7d7a", ShellProcStatus:"done", ShellProcConnName:""}
+2024-10-05 15:40:19 [wavesrv] 2024/10/05 15:40:19.605541 [router] unregistering wsh route "controller:03013e6d-1bf0-4b12-b431-53763cbe7d7a"
+2024-10-05 15:40:19 [wavesrv] 2024/10/05 15:40:19.605555 sending blockcontroller update &blockcontroller.BlockControllerRuntimeStatus{BlockId:"03013e6d-1bf0-4b12-b431-53763cbe7d7a", ShellProcStatus:"done", ShellProcConnName:""}
+2024-10-05 15:40:19 [wavesrv] 2024/10/05 15:40:19.605562 [shellproc] shell process wait loop done
+2024-10-05 15:40:19 [wavesrv] 2024/10/05 15:40:19.706344 [shellproc] shellInputCh loop done
+2024-10-05 15:40:22 [wavesrv] 2024/10/05 15:40:22.524193 filestore flush: 1/1 entries flushed, err:<nil>
+2024-10-05 15:40:27 checking-for-update
+2024-10-05 15:40:27 update-not-available
+2024-10-05 15:40:42 [wavesrv] 2024/10/05 15:40:42.153894 ReadPump error: websocket: close 1001 (going away)
+2024-10-05 15:40:42 [wavesrv] 2024/10/05 15:40:42.153951 [router] unregistering wsh route "window:cfc02ff7-5f7b-4e84-a449-cacdc4689fa3"
+2024-10-05 15:40:44 stopping updater

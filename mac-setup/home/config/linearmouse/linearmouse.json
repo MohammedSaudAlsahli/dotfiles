@@ -1,0 +1,129 @@
+{
+  "schemes" : [
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0xb019",
+          "serialNumber" : "01BE6D7A1EAEDA44",
+          "category" : "mouse",
+          "vendorID" : "0x46d",
+          "productName" : "MX Master 2S"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.6875,
+        "speed" : 0.0689655172413792768,
+        "disableAcceleration" : false
+      },
+      "buttons" : {
+        "clickDebouncing" : {
+          "timeout" : 0
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : false
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0x36",
+          "vendorID" : "0x258a",
+          "productName" : "Wired Gaming Mouse",
+          "category" : "mouse"
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "command" : false,
+            "shift" : false,
+            "action" : "none",
+            "control" : false,
+            "option" : false,
+            "button" : 4
+          }
+        ]
+      }
+    },
+    {
+      "pointer" : {
+        "speed" : 0.0689655172413792768,
+        "acceleration" : 0.6875,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x248a",
+          "productID" : "0x8266",
+          "category" : "mouse",
+          "productName" : "Touch@LOFREE"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "buttons" : {
+        "universalBackForward" : false,
+        "mappings" : [
+          {
+            "command" : false,
+            "option" : false,
+            "control" : false,
+            "action" : "missionControl",
+            "button" : 2,
+            "shift" : false
+          },
+          {
+            "button" : 3,
+            "shift" : false,
+            "option" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "v"
+              ]
+            },
+            "control" : false,
+            "command" : false
+          },
+          {
+            "option" : false,
+            "shift" : false,
+            "button" : 4,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "c"
+              ]
+            },
+            "command" : false,
+            "control" : false
+          }
+        ]
+      }
+    }
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+}

@@ -1,0 +1,38 @@
+2024-06-28 02:07:39 waveterm-app starting, WAVETERM_HOME=/Users/mohammedalsahli/.waveterm, electronpath=/Applications/Wave.app/Contents/Resources/app.asar gopath=/Applications/Wave.app/Contents/Resources/app.asar.unpacked arch=darwin/arm64
+2024-06-28 02:07:39 trying to run local server "/Applications/Wave.app/Contents/Resources/app.asar.unpacked/bin/wavesrv.arm64" >> "/Users/mohammedalsahli/.waveterm/wavesrv.log" 2>&1
+2024-06-28 02:07:39 spawnned wavesrv
+2024-06-28 02:07:39 configuring auto updater
+2024-06-28 02:07:39 checking-for-update
+2024-06-28 02:07:40 update-not-available
+2024-06-28 03:17:39 checking-for-update
+2024-06-28 03:17:40 update-not-available
+2024-06-28 04:27:39 checking-for-update
+2024-06-28 04:27:40 update-not-available
+2024-06-28 05:37:39 checking-for-update
+2024-06-28 05:37:39 update-not-available
+2024-06-28 06:47:39 checking-for-update
+2024-06-28 06:47:39 update-not-available
+2024-06-28 07:57:39 checking-for-update
+2024-06-28 07:57:39 update-not-available
+2024-06-28 09:07:39 checking-for-update
+2024-06-28 09:07:39 update-not-available
+2024-06-28 10:17:38 checking-for-update
+2024-06-28 10:17:39 update-not-available
+2024-06-28 11:27:38 checking-for-update
+2024-06-28 11:27:39 update-not-available
+2024-06-28 12:37:38 checking-for-update
+2024-06-28 12:37:39 update-not-available
+2024-06-28 13:37:38 checking-for-update
+2024-06-28 13:37:39 update-not-available
+2024-06-28 14:47:38 checking-for-update
+2024-06-28 14:47:38 update-not-available
+2024-06-28 15:57:38 checking-for-update
+2024-06-28 15:57:38 update-not-available
+2024-06-28 17:08:11 checking-for-update
+2024-06-28 17:08:12 updater error
+2024-06-28 17:08:12 Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:114393)
+    at SimpleURLLoaderWrapper.emit (node:events:518:28)
+2024-06-28 17:08:12 fireAndForget error Error: net::ERR_INTERNET_DISCONNECTED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/browser_init:2:114393)
+    at SimpleURLLoaderWrapper.emit (node:events:518:28)
