@@ -27,6 +27,3 @@ mac_setup() {
 
     echo "✅ macOS setup complete! 🎉"
 }
-
-# Run the setup
-mac_setup
