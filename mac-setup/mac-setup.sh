@@ -27,3 +27,4 @@ mac_setup() {
 
     echo "✅ macOS setup complete! 🎉"
 }
+# mac_setup

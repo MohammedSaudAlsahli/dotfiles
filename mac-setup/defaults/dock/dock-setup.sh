@@ -110,5 +110,3 @@ dock_setup() {
     killall Dock
     echo "🎉 Dock setup completed successfully!"
 }
-
-dock_setup
