@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 
 # Get the directory where the script is located
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
@@ -19,13 +19,18 @@ source_script() {
 
 echo "🚀 Starting system configuration..."
 
-# Loop through all subdirectories and source *-setup.sh files
-for dir in "$SCRIPT_DIR"/*/; do
-    if [ -d "$dir" ]; then
-        for script in "$dir"/*-setup.sh; do
-            source_script "$script"
-        done
-    fi
-done
+defaults_setup() {
+    # Loop through all subdirectories and source *-setup.sh files
+    for dir in "$SCRIPT_DIR"/*/; do
+        if [ -d "$dir" ]; then
+            for script in "$dir"/*-setup.sh; do
+                source_script "$script"
+            done
+        fi
+    done
 
-echo "🎉 System configuration completed!"
+    echo "🎉 System configuration completed!"
+
+}
+
+# defaults_setup

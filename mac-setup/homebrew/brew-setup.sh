@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-# SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-# source "$SCRIPT_DIR/apps-and-packages.sh"
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+source "$SCRIPT_DIR/apps-and-packages.sh"
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
     echo "❌ This script is designed for macOS only."
@@ -37,9 +37,6 @@ install_brew() {
 
 # Install Homebrew packages
 install_brew_packages() {
-    SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-    source "$SCRIPT_DIR/apps-and-packages.sh"
-
     printf "📦 Do you want to install Homebrew apps? [y/n] "
     read -r agreement
 
@@ -117,6 +114,58 @@ update_and_upgrade_brew_packages() {
     fi
 }
 
+# Function to check and install Homebrew formulas
+check_formula_apps() {
+    echo "🍺 Checking Homebrew formulas..."
+    for app in "${FORMULA_APPS[@]}"; do
+        if ! brew list "$app" &>/dev/null; then
+            echo "❌ $app is not installed. Installing..."
+            brew install "$app"
+        else
+            echo "✅ $app is already installed."
+        fi
+    done
+}
+
+# Function to check and install Homebrew cask apps
+check_cask_apps() {
+    echo "📦 Checking Homebrew Cask apps..."
+    for app in "${CASK_APPS[@]}"; do
+        if ! brew list --cask "$app" &>/dev/null; then
+            echo "❌ $app is not installed. Installing..."
+            brew install --cask "$app"
+        else
+            echo "✅ $app is already installed."
+        fi
+    done
+}
+
+# Function to check and install Mac App Store (MAS) apps
+check_mas_apps() {
+    echo "🛒 Checking Mac App Store (MAS) apps..."
+    for app_id in "${MAS_APPS[@]}"; do
+        if ! mas list | awk '{print $1}' | grep -q "^$app_id$"; then
+            echo "❌ MAS app with ID $app_id is not installed. Installing..."
+            mas install "$app_id"
+        else
+            echo "✅ MAS app $app_id is already installed."
+        fi
+    done
+}
+
+# Function to install fonts
+check_fonts() {
+    echo "🔤 Checking and installing fonts..."
+    for font in "${FONTS[@]}"; do
+        if ! brew list --cask "$font" &>/dev/null; then
+            echo "❌ $font is not installed. Installing..."
+            brew install --cask "$font"
+        else
+            echo "✅ $font is already installed."
+        fi
+    done
+}
+
 # Set up Homebrew (install or update)
 brew_setup() {
     echo "⚙️ Setting up Homebrew..."
@@ -124,6 +173,10 @@ brew_setup() {
     # Check if Homebrew is installed
     if command -v brew >/dev/null 2>&1; then
         echo "✅ Homebrew is already installed."
+        check_formula_apps
+        check_cask_apps
+        check_fonts
+        check_mas_apps
         update_and_upgrade_brew_packages || return 1
     else
         echo "❌ Homebrew is not installed. Installing..."
@@ -134,4 +187,4 @@ brew_setup() {
 
 }
 
-brew_setup
+# brew_setup
