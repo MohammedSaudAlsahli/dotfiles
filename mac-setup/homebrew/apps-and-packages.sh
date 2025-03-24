@@ -8,6 +8,7 @@ MAS_APPS=(
 
 )
 CASK_APPS=(
+    "httpie"
     "1password"
     "alacritty"
     "alt-tab"

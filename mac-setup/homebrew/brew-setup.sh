@@ -43,25 +43,25 @@ install_brew_packages() {
     if [[ "$agreement" =~ ^[Yy]$ ]]; then
 
         echo "⬇️ Installing Homebrew packages..."
-        brew install "${FORMULA_APPS[@]}" || {
+        brew install "${FORMULA_APPS[@]}" >/dev/null || {
             echo "⚠️ Failed to install Formula apps."
             return 1
         }
 
-        echo "⬇️ Installing Homebrew apps..."
-        brew install --cask --no-quarantine "${CASK_APPS[@]}" || {
-            echo "⚠️ Failed to install Cask apps."
-            return 1
-        }
-
         echo "⬇️ Installing Homebrew fonts..."
-        brew install --cask --no-quarantine "${FONTS[@]}" || {
+        brew install --cask --no-quarantine "${FONTS[@]}" >/dev/null || {
             echo "⚠️ Failed to install Fonts."
             return 1
         }
 
+        echo "⬇️ Installing Homebrew apps..."
+        brew install --cask --no-quarantine "${CASK_APPS[@]}" >/dev/null || {
+            echo "⚠️ Failed to install Cask apps."
+            return 1
+        }
+
         echo "⬇️ Installing Mac App Store apps..."
-        mas install "${MAS_APPS[@]}" || {
+        mas install "${MAS_APPS[@]}" >/dev/null || {
             echo "⚠️ Failed to install Mac App Store apps."
             return 1
         }
