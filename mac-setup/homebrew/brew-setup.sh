@@ -186,5 +186,3 @@ brew_setup() {
     fi
 
 }
-
-# brew_setup

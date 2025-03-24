@@ -48,5 +48,3 @@ home_setup() {
 
     echo "✅ Dotfiles setup complete! 🎉"
 }
-
-# home_setup
