@@ -1,0 +1,79 @@
+2024/06/28 02:07:39.708813 [wave] *** starting wavesrv version 0.7.6+202406150027
+2024/06/28 02:07:39.708920 [wave] homedir = "/Users/mohammedalsahli/.waveterm"
+2024/06/28 02:07:39.708934 [base] acquiring lock on /Users/mohammedalsahli/.waveterm/waveterm.lock
+2024/06/28 02:07:39.709086 [wave] created directory "/Users/mohammedalsahli/.waveterm/config"
+2024/06/28 02:07:39.709321 [wave] created file "/Users/mohammedalsahli/.waveterm/config/keybindings.json"
+2024/06/28 02:07:39.709496 [wave] created directory "/Users/mohammedalsahli/.waveterm/config/terminal-themes"
+2024/06/28 02:07:39.711283 [db] db version = 0
+2024/06/28 02:07:39.711560 [db] migrating from 0 to 31
+2024/06/28 02:07:39.711566 [db] backing up database waveterm.db to backup.waveterm.db
+2024/06/28 02:07:39.713855 [db] migration v1, elapsed 2.024791ms
+2024/06/28 02:07:39.716014 [db] migration v2, elapsed 2.142958ms
+2024/06/28 02:07:39.717655 [db] migration v3, elapsed 1.625958ms
+2024/06/28 02:07:39.719185 [db] migration v4, elapsed 1.521125ms
+2024/06/28 02:07:39.720492 [db] migration v5, elapsed 1.295375ms
+2024/06/28 02:07:39.721794 [db] migration v6, elapsed 1.279042ms
+2024/06/28 02:07:39.723054 [db] migration v7, elapsed 1.250584ms
+2024/06/28 02:07:39.727223 [db] migration v8, elapsed 4.161208ms
+2024/06/28 02:07:39.729315 [db] migration v9, elapsed 2.080541ms
+2024/06/28 02:07:39.735018 [db] migration v10, elapsed 5.691042ms
+2024/06/28 02:07:39.736430 [db] migration v11, elapsed 1.397875ms
+2024/06/28 02:07:39.738133 [db] migration v12, elapsed 1.687417ms
+2024/06/28 02:07:39.743500 [db] successfully opened db /Users/mohammedalsahli/.waveterm/waveterm.db
+2024/06/28 02:07:39.744360 [db] got 0 cmd-screen migrations
+2024/06/28 02:07:39.744394 [db] cmd screen migration done: 919.667µs
+2024/06/28 02:07:39.744402 [db] migration v13, elapsed 6.259167ms
+2024/06/28 02:07:39.745947 [db] migration v14, elapsed 1.541166ms
+2024/06/28 02:07:39.746405 [db] migration v15, elapsed 450.291µs
+2024/06/28 02:07:39.747272 [db] migration v16, elapsed 860.167µs
+2024/06/28 02:07:39.747633 [db] migration v17, elapsed 351.709µs
+2024/06/28 02:07:39.750543 [db] migration v18, elapsed 2.903167ms
+2024/06/28 02:07:39.751347 [db] migration v19, elapsed 777µs
+2024/06/28 02:07:39.755532 [db] got 0 cmd-line migrations
+2024/06/28 02:07:39.755542 [db] cmd line migration done: 201µs
+2024/06/28 02:07:39.755547 [db] migration v20, elapsed 4.191ms
+2024/06/28 02:07:39.755880 [db] migration v21, elapsed 328.791µs
+2024/06/28 02:07:39.756016 [db] migration v22, elapsed 131.375µs
+2024/06/28 02:07:39.756168 [db] migration v23, elapsed 146.834µs
+2024/06/28 02:07:39.756304 [db] migration v24, elapsed 129.417µs
+2024/06/28 02:07:39.756619 [db] migration v25, elapsed 310.833µs
+2024/06/28 02:07:39.756940 [db] migration v26, elapsed 316.125µs
+2024/06/28 02:07:39.759069 [db] migration v27, elapsed 2.124375ms
+2024/06/28 02:07:39.759425 [db] migration v28, elapsed 349.625µs
+2024/06/28 02:07:39.759544 [db] migration v29, elapsed 113.541µs
+2024/06/28 02:07:39.760240 [db] remote-instance v30 migration done: 187.417µs (0 bad versions)
+2024/06/28 02:07:39.760246 [db] migration v30, elapsed 697.708µs
+2024/06/28 02:07:39.760541 [db] migration v31, elapsed 290.916µs
+2024/06/28 02:07:39.760546 [db] migration done, new version = 31
+2024/06/28 02:07:39.760943 [db] version=31
+2024/06/28 02:07:39.762949 create new clientid[a6692436-d98b-4c3d-b412-8f39c061167c] userid[6f306c55-5221-4bd2-a523-b0cabed58a34] with public/private keypair
+2024/06/28 02:07:39.763183 userid = 6f306c55-5221-4bd2-a523-b0cabed58a34
+2024/06/28 02:07:39.763696 [db] added local remote 'mohammedalsahli@Mohammeds-Macbook-air-2.local', id=2fbf8ddd-2d96-4ae5-a74d-f313b7d5406d
+2024/06/28 02:07:39.763788 [db] added sudo remote 'sudo@mohammedalsahli@Mohammeds-Macbook-air-2.local', id=dcd9146f-cd25-40b0-8302-bca9c9ef2cd1
+2024/06/28 02:07:39.763989 PCLOUD_ENDPOINT=https://api.waveterm.dev/central
+2024/06/28 02:07:39.768306 started config watcher: /Users/mohammedalsahli/.waveterm/config/terminal-themes
+2024/06/28 02:07:39.768628 Running websocket server on 127.0.0.1:1623
+2024/06/28 02:07:39.768880 added to watcher: /Users/mohammedalsahli/.waveterm/config/terminal-themes
+2024/06/28 02:07:39.769132 [wave] config path: "/Users/mohammedalsahli/.waveterm/config/"
+2024/06/28 02:07:39.769141 Running main server on 127.0.0.1:1619
+2024/06/28 02:07:40.082517 WebSocket opened d76652f1-b564-4e3a-ac43-0e8101eb3713:4 127.0.0.1:57633
+2024/06/28 02:07:40.089327 [ws] unwatch screen clientid=d76652f1-b564-4e3a-ac43-0e8101eb3713:4
+2024/06/28 02:07:45.328586 client no-telemetry setting updated to true
+2024/06/28 02:07:45.329631 [pcloud] sending request POST https://api.waveterm.dev/central/no-telemetry
+2024/06/28 02:07:49.194573 [wave] created directory "/Users/mohammedalsahli/.waveterm/screens/0667ddb6-ab15-4b67-8c05-18ed8f74bb9c"
+2024/06/28 02:07:49.203729 [ws] watch screen clientid=d76652f1-b564-4e3a-ac43-0e8101eb3713:4 sessionid=1dca6630-7bf8-4b97-9d24-760c0a3c2fa3 screenid=0667ddb6-ab15-4b67-8c05-18ed8f74bb9c, updateCh=0x1400008af00
+2024/06/28 02:07:49.203790 [ws d76652f1-b564-4e3a-ac43-0e8101eb3713:4] watchscreen 1dca6630-7bf8-4b97-9d24-760c0a3c2fa3/0667ddb6-ab15-4b67-8c05-18ed8f74bb9c
+2024/06/28 02:07:49.768155 [pcloud] starting update writer
+2024/06/28 02:07:49.869923 [pcloud] sending request POST https://api.waveterm.dev/central/auth/web-share-update
+2024/06/28 02:07:50.807925 [pcloud] error updateid:1, type:cmd:termopts 0667ddb6-ab15-4b67-8c05-18ed8f74bb9c/d79d3806-9dff-44e1-a4a5-815abb295c64 err:WebScreen does not exist
+2024/06/28 02:07:50.808007 [pcloud] sent 1 web-updates
+2024/06/28 02:07:50.808033 [pcloud] updates: cmd:termopts[0667ddb6:d79d3806]
+2024/06/28 02:08:28.042649 delete screen dir, remove-all /Users/mohammedalsahli/.waveterm/screens/0667ddb6-ab15-4b67-8c05-18ed8f74bb9c
+2024/06/28 02:08:28.044872 [ws] unwatch screen clientid=d76652f1-b564-4e3a-ac43-0e8101eb3713:4
+2024/06/28 02:08:29.941243 ReadPump 127.0.0.1:57633 Err: websocket: close 1001 (going away)
+2024/06/28 02:08:31.083083 WritePump 127.0.0.1:57633 err: websocket: close sent
+2024/06/28 02:09:01.083037 [ws] unwatch screen clientid=d76652f1-b564-4e3a-ac43-0e8101eb3713:4
+2024/06/28 17:45:46.435989 [wave] local server stdin closed/error (EOF), start shutdown
+2024/06/28 17:45:46.444692 [wave] closing db connection
+2024/06/28 17:45:46.447952 [wave] *** shutting down local server
+2024/06/28 17:45:46.448873 file watcher closed.

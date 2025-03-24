@@ -4,3 +4,16 @@
 *.swo
 .zsh_history
 .bash_history
+mac-setup/home/config/raycast/config.json
+mac-setup/home/config/gh
+mac-setup/home/config/jellyfin
+mac-setup/home/config/qBittorrent
+mac-setup/home/config/iterm2
+
+mac-setup/home/docker
+mac-setup/home/windsurf
+mac-setup/home/th-client
+mac-setup/home/vim
+# mac-setup/home/vscode/argv.json
+mac-setup/home/vscode
+mac-setup/brave

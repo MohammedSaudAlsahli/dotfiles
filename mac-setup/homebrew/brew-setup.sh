@@ -1,8 +1,7 @@
 #!/usr/bin/env zsh
 
-SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-
-source "$SCRIPT_DIR/apps-and-packages.sh"
+# SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+# source "$SCRIPT_DIR/apps-and-packages.sh"
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
     echo "❌ This script is designed for macOS only."
@@ -38,6 +37,9 @@ install_brew() {
 
 # Install Homebrew packages
 install_brew_packages() {
+    SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+    source "$SCRIPT_DIR/apps-and-packages.sh"
+
     printf "📦 Do you want to install Homebrew apps? [y/n] "
     read -r agreement
 
@@ -116,7 +118,7 @@ update_and_upgrade_brew_packages() {
 }
 
 # Set up Homebrew (install or update)
-setup_homebrew() {
+brew_setup() {
     echo "⚙️ Setting up Homebrew..."
 
     # Check if Homebrew is installed
@@ -131,3 +133,5 @@ setup_homebrew() {
     fi
 
 }
+
+brew_setup
