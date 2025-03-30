@@ -50,3 +50,5 @@ settings_setup() {
     add_apps_to_login
     echo "✅ Settings setup completed!"
 }
+
+settings_setup

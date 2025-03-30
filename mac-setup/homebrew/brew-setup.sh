@@ -119,8 +119,15 @@ check_formula_apps() {
     echo "🍺 Checking Homebrew formulas..."
     for app in "${FORMULA_APPS[@]}"; do
         if ! brew list "$app" &>/dev/null; then
-            echo "❌ $app is not installed. Installing..."
-            brew install "$app"
+            echo "❌ $app is not installed."
+            printf "📦 Do you want to install $app? [y/n] "
+            read -r agreement
+
+            brew install "$app" >/dev/null || {
+                echo "⚠️ Failed to install $app."
+                return 1
+            }
+
         else
             echo "✅ $app is already installed."
         fi
@@ -132,8 +139,15 @@ check_cask_apps() {
     echo "📦 Checking Homebrew Cask apps..."
     for app in "${CASK_APPS[@]}"; do
         if ! brew list --cask "$app" &>/dev/null; then
-            echo "❌ $app is not installed. Installing..."
-            brew install --cask "$app"
+            echo "❌ $app is not installed."
+            printf "📦 Do you want to install $app? [y/n] "
+            read -r agreement
+
+            brew install --cask "$app" >/dev/null || {
+                echo "⚠️ Failed to install $app."
+                return 1
+            }
+
         else
             echo "✅ $app is already installed."
         fi
@@ -145,8 +159,15 @@ check_mas_apps() {
     echo "🛒 Checking Mac App Store (MAS) apps..."
     for app_id in "${MAS_APPS[@]}"; do
         if ! mas list | awk '{print $1}' | grep -q "^$app_id$"; then
-            echo "❌ MAS app with ID $app_id is not installed. Installing..."
-            mas install "$app_id"
+            echo "❌ MAS app with ID $app_id is not installed."
+            printf "📦 Do you want to install $app_id? [y/n] "
+            read -r agreement
+
+            mas install "$app_id" >/dev/null || {
+                echo "⚠️ Failed to install $app_id."
+                return 1
+            }
+
         else
             echo "✅ MAS app $app_id is already installed."
         fi
@@ -158,8 +179,14 @@ check_fonts() {
     echo "🔤 Checking and installing fonts..."
     for font in "${FONTS[@]}"; do
         if ! brew list --cask "$font" &>/dev/null; then
-            echo "❌ $font is not installed. Installing..."
-            brew install --cask "$font"
+            echo "❌ $font is not installed."
+            printf "📦 Do you want to install $font? [y/n] "
+            read -r agreement
+
+            brew install --cask "$font" >/dev/null || {
+                echo "⚠️ Failed to install $font."
+                return 1
+            }
         else
             echo "✅ $font is already installed."
         fi
