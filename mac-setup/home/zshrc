@@ -10,8 +10,6 @@ export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export NULLCMD=bat
 export HOMEBREW_CASK_OPTS="--no-quarantine"
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 
 # ----- source -----
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -148,6 +146,7 @@ ytdlp() {
 # ----- alias -----
 alias vitejs="npm create vite@latest"
 # alias ls="eza -lahF --git --icons=always"
+alias buu="brew update -q && brew upgrade -q -g"
 alias uvv="uv venv .venv"
 alias reload="source ~/.zshrc"
 alias bu="brew update && brew upgrade"

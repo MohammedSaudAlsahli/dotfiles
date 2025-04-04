@@ -1,20 +1,20 @@
-"use strict";var P=Object.create;var g=Object.defineProperty;var W=Object.getOwnPropertyDescriptor;var K=Object.getOwnPropertyNames;var R=Object.getPrototypeOf,D=Object.prototype.hasOwnProperty;var F=(e,n)=>{for(var t in n)g(e,t,{get:n[t],enumerable:!0})},$=(e,n,t,o)=>{if(n&&typeof n=="object"||typeof n=="function")for(let s of K(n))!D.call(e,s)&&s!==t&&g(e,s,{get:()=>n[s],enumerable:!(o=W(n,s))||o.enumerable});return e};var A=(e,n,t)=>(t=e!=null?P(R(e)):{},$(n||!e||!e.__esModule?g(t,"default",{value:e,enumerable:!0}):t,e)),M=e=>$(g({},"__esModule",{value:!0}),e);var V={};F(V,{default:()=>E,onlyName:()=>H,openIn:()=>p,terminal:()=>m});module.exports=M(V);var i=require("@raycast/api"),h=require("react");var I=A(require("node:process"),1),k=require("node:util"),b=require("node:child_process"),O=(0,k.promisify)(b.execFile);async function d(e,{humanReadableOutput:n=!0}={}){if(I.default.platform!=="darwin")throw new Error("macOS only");let t=n?[]:["-ss"],{stdout:o}=await O("osascript",["-e",e,t]);return o.trim()}var y=require("@raycast/api"),u=A(require("fs")),L=(0,y.getPreferenceValues)(),_=L.sshConfig.replace("~",process.env.HOME);function N(e){let t=u.readFileSync(e,"utf8").split(`
-`),o=[],s=null;for(let r of t){let c=r.trim();if(!(c.startsWith("#")||c==="")){if(c.startsWith("Host ")&&c!=="Host *")s!==null&&o.push(s),s={id:o.length.toString(),address:"",name:c.substring(5),user:""};else if(s!==null){let a=c.indexOf(" "),f=c.substring(0,a),w=c.substring(a+1);switch(f){case"HostName":s.address=w;break;case"User":s.user=w;break;case"Port":s.port=w;break;case"IdentityFile":s.sshKey=w;break;case"HostNameKey":break;case"RemoteCommand":s.command=w;break;default:break}}}}return s!==null&&o.push(s),o}function U(e,n){let t="";for(let o of n)t+=`Host ${o.name}
+"use strict";var W=Object.create;var g=Object.defineProperty;var G=Object.getOwnPropertyDescriptor;var K=Object.getOwnPropertyNames;var M=Object.getPrototypeOf,R=Object.prototype.hasOwnProperty;var D=(e,n)=>{for(var t in n)g(e,t,{get:n[t],enumerable:!0})},$=(e,n,t,o)=>{if(n&&typeof n=="object"||typeof n=="function")for(let s of K(n))!R.call(e,s)&&s!==t&&g(e,s,{get:()=>n[s],enumerable:!(o=G(n,s))||o.enumerable});return e};var A=(e,n,t)=>(t=e!=null?W(M(e)):{},$(n||!e||!e.__esModule?g(t,"default",{value:e,enumerable:!0}):t,e)),F=e=>$(g({},"__esModule",{value:!0}),e);var q={};D(q,{default:()=>P,onlyName:()=>x,openIn:()=>f,terminal:()=>u});module.exports=F(q);var i=require("@raycast/api"),h=require("react");var I=A(require("node:process"),1),E=require("node:util"),v=require("node:child_process"),O=(0,E.promisify)(v.execFile);async function l(e,{humanReadableOutput:n=!0}={}){if(I.default.platform!=="darwin")throw new Error("macOS only");let t=n?[]:["-ss"],{stdout:o}=await O("osascript",["-e",e,t]);return o.trim()}var y=require("@raycast/api"),_=A(require("fs")),L=(0,y.getPreferenceValues)(),m=L.sshConfig.replace("~",process.env.HOME);function N(e){let t=_.readFileSync(e,"utf8").split(`
+`),o=[],s=null;for(let r of t){let d=r.trim();if(!(d.startsWith("#")||d==="")){if(d.startsWith("Host ")&&d!=="Host *")s!==null&&o.push(s),s={id:o.length.toString(),address:"",name:d.substring(5),user:""};else if(s!==null){let w=d.indexOf(" "),a=d.substring(0,w),p=d.substring(w+1);switch(a){case"HostName":s.address=p;break;case"User":s.user=p;break;case"Port":s.port=p;break;case"IdentityFile":s.sshKey=p;break;case"HostNameKey":break;case"RemoteCommand":s.command=p;break;default:break}}}}return s!==null&&o.push(s),o}function U(e,n){let t="";for(let o of n)t+=`Host ${o.name}
 `,t+=`  HostName ${o.address}
 `,o.user&&(t+=`  User ${o.user}
 `),o.port&&(t+=`  Port ${o.port}
 `),o.sshKey&&(t+=`  IdentityFile ${o.sshKey}
 `),o.command&&(t+=`  RemoteCommand ${o.command}
 `),t+=`
-`;u.writeFileSync(e,t.trimEnd())}async function v(){switch(_){case"localStorage":{let{connections:e}=await y.LocalStorage.allItems();return e?JSON.parse(e):[]}default:return u.existsSync(_)?N(_):[]}}async function T(e){switch(_){case"localStorage":await y.LocalStorage.setItem("connections",JSON.stringify(e));break;default:U(_,e);break}}var l=require("react/jsx-runtime"),C=(0,i.getPreferenceValues)(),m=C.terminal,p=C.openin,H=C.onlyname;async function j(e){let n;if(H)n=["ssh",e.name].join(" ");else{let a="";e.sshKey&&(a=`-i ${e.sshKey} `);let f="";e.port&&(f=`-p ${e.port} `);let w="",x="";e.command&&(w=`\\"${e.command}\\" `,x="-t");let S=e.address;e.user&&(S=`${encodeURIComponent(e.user)}@${S}`),n=["ssh",x,a,S,f,w].filter(Boolean).join(" ")}let t=`
+`;_.writeFileSync(e,t.trimEnd())}async function b(){switch(m){case"localStorage":{let{connections:e}=await y.LocalStorage.allItems();return e?JSON.parse(e):[]}default:return _.existsSync(m)?N(m):[]}}async function T(e){switch(m){case"localStorage":await y.LocalStorage.setItem("connections",JSON.stringify(e));break;default:U(m,e);break}}var c=require("react/jsx-runtime"),C=(0,i.getPreferenceValues)(),u=C.terminal,f=C.openin,x=C.onlyname;async function j(e){let n;if(x)n=["ssh",e.name].join(" ");else{let a="";e.sshKey&&(a=`-i ${e.sshKey} `);let p="";e.port&&(p=`-p ${e.port} `);let H="",k="";e.command&&(H=`\\"${e.command}\\" `,k="-t");let S=e.address;e.user&&(S=`${encodeURIComponent(e.user)}@${S}`),n=["ssh",k,a,S,p,H].filter(Boolean).join(" ")}let t=`
       -- For the latest version:
       -- https://github.com/DavidMChan/custom-alfred-warp-scripts
 
       -- Set this property to true to always open in a new window
-      property open_in_new_window : ${p=="newWindow"}
+      property open_in_new_window : ${f=="newWindow"}
 
       -- Set this property to true to always open in a new tab
-      property open_in_new_tab : ${p=="newTab"}
+      property open_in_new_tab : ${f=="newTab"}
 
       -- Don't change this :)
       property opened_new_window : false
@@ -101,7 +101,7 @@
     end tell
   `,s=`
     -- Set this property to true to open in a new window instead of a new tab
-      property open_in_new_window : ${p=="newWindow"}
+      property open_in_new_window : ${f=="newWindow"}
 
     on new_window()
     	tell application "iTerm" to create window with default profile
@@ -159,10 +159,10 @@
     call_forward()
   `,r=`
   -- Set this property to true to always open in a new window
-  property open_in_new_window : ${p=="newWindow"}
+  property open_in_new_window : ${f=="newWindow"}
 
   -- Set this property to true to always open in a new tab
-  property open_in_new_tab : ${p=="newTab"}
+  property open_in_new_tab : ${f=="newTab"}
 
   -- Don't change this :)
   property opened_new_window : false
@@ -243,9 +243,9 @@
   send_text("${n}
 ") -- Enter at the end of string
   call_forward()
-  `,c=`
+  `,d=`
   -- Set this property to true to open in a new window instead of a new tab
-  property open_in_new_window : ${p=="newWindow"}
+  property open_in_new_window : ${f=="newWindow"}
 
   on new_window()
       tell application "System Events" 
@@ -320,4 +320,73 @@
 
   send_text("${n}")
   call_forward()
-  `;if(m=="iTerm")try{await d(s)}catch(a){await d(o),console.log(a)}else if(m=="Warp")try{await d(t)}catch(a){await d(o),console.log(a)}else if(m=="Alacritty")try{await(0,i.closeMainWindow)(),await d(r)}catch(a){await d(o),console.log(a)}else if(m=="Hyper")try{await d(c)}catch(a){await d(o),console.log(a)}else await d(o);await(0,i.showHUD)(`\u2705 Connection [${e.name}] opened with [${m}].`)}function B(e){if(H)return e.name;let n=[];e.sshKey&&n.push(`-i ${e.sshKey}`),e.port&&n.push(`-p ${e.port}`),e.command&&n.push(`"${e.command}"`);let t=e.user?`${e.user}@${e.address}`:e.address;return n.unshift("ssh",t),n.filter(Boolean).join(" ")}function E(){let[e,n]=(0,h.useState)([]),[t,o]=(0,h.useState)(!0);(0,h.useEffect)(()=>{(async()=>{o(!0);let r=await v();n(r),o(!1)})()},[]);async function s(r){if(await(0,i.confirmAlert)({title:"Remove Connection",message:`Are you sure you want to remove connection [${r.name}]?`,primaryAction:{title:"Remove",style:i.Alert.ActionStyle.Destructive},dismissAction:{title:"Cancel"}})){let a=await v();a=a.filter(f=>f.id!==r.id),await T(a),n(a),await(0,i.showHUD)(`\u{1F5D1} Connection [${r.name}] removed!`)}}return(0,l.jsx)(i.List,{isLoading:t,children:e.map(r=>(0,l.jsx)(i.List.Item,{actions:(0,l.jsx)(G,{item:r,onItemRemove:s}),id:r.id,title:r.name,subtitle:J(r)},r.name))})}function G({item:e,onItemRemove:n}){let t=B(e);return(0,l.jsxs)(i.ActionPanel,{children:[(0,l.jsxs)(i.ActionPanel.Section,{title:"Operations",children:[(0,l.jsx)(i.Action,{icon:i.Icon.Terminal,title:"Open Connection",onAction:()=>j(e)}),(0,l.jsx)(i.Action.CopyToClipboard,{title:"Copy Connection String",content:t,shortcut:{modifiers:["cmd"],key:"c"}}),(0,l.jsx)(i.Action.Paste,{icon:i.Icon.Text,title:"Paste Connection String",content:t,shortcut:{modifiers:["cmd"],key:"v"},onPaste:()=>(0,i.showHUD)(`\u{1F4DD} Pasting conn. [${e.name}] to active app`)})]}),(0,l.jsx)(i.ActionPanel.Section,{title:"Danger zone",children:(0,l.jsx)(i.Action,{title:"Remove Connection",icon:i.Icon.Trash,style:i.Action.Style.Destructive,onAction:()=>n(e),shortcut:{modifiers:["ctrl"],key:"x"}})})]})}function J(e){return`${e.user?e.user+"@":""}${e.address}${e.port?" Port: "+e.port:""}${e.sshKey?" SSH Key: "+e.sshKey:""} ${e.command?' Command: "'+e.command+'"':""}`}0&&(module.exports={onlyName,openIn,terminal});
+  `,w=`
+  -- Set this property to true to open in a new window instead of a new tab
+  property open_in_new_window : ${f=="newWindow"}
+
+  on new_window()
+      tell application "Ghostty"
+          activate
+          tell application "System Events" to tell process "Ghostty"
+              keystroke "n" using {command down}
+          end tell
+      end tell
+      delay 0.5
+  end new_window
+
+  on new_tab()
+      tell application "Ghostty"
+          activate
+          tell application "System Events" to tell process "Ghostty"
+              keystroke "t" using {command down}
+          end tell
+      end tell
+      delay 0.5
+  end new_tab
+
+  on call_forward()
+      tell application "Ghostty" to activate
+  end call_forward
+
+  on is_running()
+      application "Ghostty" is running
+  end is_running
+
+  on has_windows()
+      if not is_running() then return false
+      tell application "System Events"
+          if windows of process "Ghostty" is {} then return false
+      end tell
+      true
+  end has_windows
+
+  on send_text(custom_text)
+      tell application "System Events" to tell process "Ghostty"
+          keystroke custom_text & return
+      end tell
+  end send_text
+
+  -- Main
+  if has_windows() then
+      if open_in_new_window then
+          new_window()
+      else
+          new_tab()
+      end if
+  else
+      if is_running() then
+          new_window()
+      else
+          call_forward()
+      end if
+  end if
+
+  -- Give Ghostty some time to load
+  repeat until has_windows()
+      delay 0.5
+  end repeat
+  delay 0.5
+
+  send_text("${n}")
+  call_forward()
+  `;if(u=="iTerm")try{await l(s)}catch(a){await l(o),console.log(a)}else if(u=="Warp")try{await l(t)}catch(a){await l(o),console.log(a)}else if(u=="Alacritty")try{await(0,i.closeMainWindow)(),await l(r)}catch(a){await l(o),console.log(a)}else if(u=="Hyper")try{await l(d)}catch(a){await l(o),console.log(a)}else if(u=="Ghostty")try{await l(w)}catch(a){await l(o),console.log(a)}else await l(o);await(0,i.showHUD)(`\u2705 Connection [${e.name}] opened with [${u}].`)}function B(e){if(x)return e.name;let n=[];e.sshKey&&n.push(`-i ${e.sshKey}`),e.port&&n.push(`-p ${e.port}`),e.command&&n.push(`"${e.command}"`);let t=e.user?`${e.user}@${e.address}`:e.address;return n.unshift("ssh",t),n.filter(Boolean).join(" ")}function P(){let[e,n]=(0,h.useState)([]),[t,o]=(0,h.useState)(!0);(0,h.useEffect)(()=>{(async()=>{o(!0);let r=await b();n(r),o(!1)})()},[]);async function s(r){if(await(0,i.confirmAlert)({title:"Remove Connection",message:`Are you sure you want to remove connection [${r.name}]?`,primaryAction:{title:"Remove",style:i.Alert.ActionStyle.Destructive},dismissAction:{title:"Cancel"}})){let w=await b();w=w.filter(a=>a.id!==r.id),await T(w),n(w),await(0,i.showHUD)(`\u{1F5D1} Connection [${r.name}] removed!`)}}return(0,c.jsx)(i.List,{isLoading:t,children:e.map(r=>(0,c.jsx)(i.List.Item,{actions:(0,c.jsx)(J,{item:r,onItemRemove:s}),id:r.id,title:r.name,subtitle:V(r)},r.name))})}function J({item:e,onItemRemove:n}){let t=B(e);return(0,c.jsxs)(i.ActionPanel,{children:[(0,c.jsxs)(i.ActionPanel.Section,{title:"Operations",children:[(0,c.jsx)(i.Action,{icon:i.Icon.Terminal,title:"Open Connection",onAction:()=>j(e)}),(0,c.jsx)(i.Action.CopyToClipboard,{title:"Copy Connection String",content:t,shortcut:{modifiers:["cmd"],key:"c"}}),(0,c.jsx)(i.Action.Paste,{icon:i.Icon.Text,title:"Paste Connection String",content:t,shortcut:{modifiers:["cmd"],key:"v"},onPaste:()=>(0,i.showHUD)(`\u{1F4DD} Pasting conn. [${e.name}] to active app`)})]}),(0,c.jsx)(i.ActionPanel.Section,{title:"Danger zone",children:(0,c.jsx)(i.Action,{title:"Remove Connection",icon:i.Icon.Trash,style:i.Action.Style.Destructive,onAction:()=>n(e),shortcut:{modifiers:["ctrl"],key:"x"}})})]})}function V(e){return`${e.user?e.user+"@":""}${e.address}${e.port?" Port: "+e.port:""}${e.sshKey?" SSH Key: "+e.sshKey:""} ${e.command?' Command: "'+e.command+'"':""}`}0&&(module.exports={onlyName,openIn,terminal});
