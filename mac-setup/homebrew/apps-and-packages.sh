@@ -57,7 +57,6 @@ FORMULA_APPS=(
     "zsh-autosuggestions"
     "zsh-syntax-highlighting"
     "yt-dlp"
-    "powerlevel10k"
     "tmux"
     "stow"
 )
