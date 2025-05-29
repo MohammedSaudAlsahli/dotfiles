@@ -156,7 +156,7 @@ alias ls="lsd -lA --git --header"
 alias trail="<<<${(F)path}"
 
 # buu 
-brew outdated -vg
+brew outdated -vg # to get the outdated apps on mac using brew 
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
