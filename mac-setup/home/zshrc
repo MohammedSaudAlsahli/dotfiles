@@ -148,7 +148,7 @@ ytdlp() {
 # ----- alias -----
 alias vitejs="npm create vite@latest"
 # alias ls="eza -lahF --git --icons=always"
-alias buu="brew update -q && brew upgrade -q -g"
+alias buu="brew update -v && brew upgrade -v -g"
 alias uvv="uv venv .venv"
 alias reload="source ~/.zshrc"
 alias bu="brew update && brew upgrade"
