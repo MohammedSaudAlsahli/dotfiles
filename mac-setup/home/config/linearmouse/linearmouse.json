@@ -1,24 +1,25 @@
 {
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.1",
   "schemes" : [
     {
-      "if" : {
-        "device" : {
-          "productID" : "0xb019",
-          "serialNumber" : "01BE6D7A1EAEDA44",
-          "category" : "mouse",
-          "vendorID" : "0x46d",
-          "productName" : "MX Master 2S"
-        }
-      },
-      "pointer" : {
-        "acceleration" : 0.6875,
-        "speed" : 0.0689655172413792768,
-        "disableAcceleration" : false
-      },
       "buttons" : {
         "clickDebouncing" : {
           "timeout" : 0
         }
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xb019",
+          "productName" : "MX Master 2S",
+          "serialNumber" : "01BE6D7A1EAEDA44",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.6875,
+        "disableAcceleration" : false,
+        "speed" : 0.0689655172413792768
       },
       "scrolling" : {
         "reverse" : {
@@ -27,103 +28,103 @@
       }
     },
     {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "none",
+            "button" : 4,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "shift" : false
+          }
+        ]
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x36",
+          "productName" : "Wired Gaming Mouse",
+          "vendorID" : "0x258a"
+        }
+      },
       "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
         "reverse" : {
           "vertical" : true
         },
         "speed" : {
           "vertical" : 0
-        },
-        "distance" : {
-          "vertical" : "auto"
-        },
-        "acceleration" : {
-          "vertical" : 1
         }
-      },
-      "if" : {
-        "device" : {
-          "productID" : "0x36",
-          "vendorID" : "0x258a",
-          "productName" : "Wired Gaming Mouse",
-          "category" : "mouse"
-        }
-      },
-      "buttons" : {
-        "mappings" : [
-          {
-            "command" : false,
-            "shift" : false,
-            "action" : "none",
-            "control" : false,
-            "option" : false,
-            "button" : 4
-          }
-        ]
       }
     },
     {
-      "pointer" : {
-        "speed" : 0.0689655172413792768,
-        "acceleration" : 0.6875,
-        "disableAcceleration" : false
-      },
-      "if" : {
-        "device" : {
-          "vendorID" : "0x248a",
-          "productID" : "0x8266",
-          "category" : "mouse",
-          "productName" : "Touch@LOFREE"
-        }
-      },
-      "scrolling" : {
-        "reverse" : {
-          "vertical" : true
-        },
-        "acceleration" : {
-          "vertical" : 1
-        }
-      },
       "buttons" : {
-        "universalBackForward" : false,
         "mappings" : [
           {
-            "command" : false,
-            "option" : false,
-            "control" : false,
             "action" : "missionControl",
             "button" : 2,
+            "command" : false,
+            "control" : false,
+            "option" : false,
+            "repeat" : false,
             "shift" : false
           },
           {
-            "button" : 3,
-            "shift" : false,
-            "option" : false,
             "action" : {
               "keyPress" : [
                 "command",
                 "v"
               ]
             },
+            "button" : 3,
+            "command" : false,
             "control" : false,
-            "command" : false
+            "option" : false,
+            "shift" : false
           },
           {
-            "option" : false,
-            "shift" : false,
-            "button" : 4,
             "action" : {
               "keyPress" : [
                 "command",
                 "c"
               ]
             },
+            "button" : 4,
             "command" : false,
-            "control" : false
+            "control" : false,
+            "option" : false,
+            "shift" : false
           }
-        ]
+        ],
+        "universalBackForward" : false
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x8266",
+          "productName" : "Touch@LOFREE",
+          "vendorID" : "0x248a"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.6875,
+        "disableAcceleration" : false,
+        "speed" : 0.0689655172413792768
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : true
+        }
       }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+  ]
 }
