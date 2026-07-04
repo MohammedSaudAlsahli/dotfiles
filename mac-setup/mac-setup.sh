@@ -24,6 +24,8 @@ mac_setup() {
     run_setup_function "homebrew/brew-setup.sh" "brew_setup"
     run_setup_function "home/home-setup.sh" "home_setup"
     run_setup_function "defaults/defaults-setup.sh" "defaults_setup"
+    run_setup_function "../ai/ai-setup.sh" "ai_setup"
+    run_setup_function "../ai/secrets-setup.sh" "secrets_setup"
 
     echo "✅ macOS setup complete! 🎉"
 }

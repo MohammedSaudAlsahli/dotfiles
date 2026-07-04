@@ -1,71 +1,22 @@
 #!/usr/bin/env zsh
 
+# This file is kept for backward compatibility.
+# The Brewfile at the repo root is now the single source of truth.
+# Use:  brew bundle --file="$HOME/.dotfiles/Brewfile"
+#
+# The arrays below are still available for scripts that reference them directly
+# (e.g., check_formula_apps, check_cask_apps), but the primary install path
+# is now `brew bundle` which reads the Brewfile.
+
+BREWFILE_PATH="$HOME/.dotfiles/Brewfile"
+
+# --- Mac App Store Apps (MAS) ---
+# Kept for scripts that need the MAS array specifically.
 MAS_APPS=(
-    "937984704"
-    "497799835"
-    "409201541"
-    "409203825"
-
-)
-CASK_APPS=(
-    "httpie"
-    "1password"
-    "alacritty"
-    "alt-tab"
-    "appcleaner"
-    "betterdisplay"
-    "brave-browser"
-    "clop"
-    "docker"
-    "get-api"
-    "hot"
-    "kdenlive"
-    "keyclu"
-    "ledger-live"
-    "visual-studio-code"
-    "tableplus"
-    "stremio"
-    "raycast"
-    "qbittorrent"
-    "obsidian"
-    "mounty"
-)
-
-FORMULA_APPS=(
-    "mas"
-    "bat"
-    "lsd"
-    "fzf"
-    "ffmpeg"
-    "tlrc"
-    "tree"
-    "htop"
-    "n"
-    "neovim"
-    "nano"
-    "lua"
-    "openssh"
-    "openssl"
-    "pandoc"
-    "vite"
-    "httpie"
-    "wget"
-    "curl"
-    "uv"
-    "rust"
-    "zsh-autocomplete"
-    "zsh-autosuggestions"
-    "zsh-syntax-highlighting"
-    "yt-dlp"
-    "tmux"
-    "stow"
-)
-
-FONTS=(
-    "font-fira-code"
-    "font-jetbrains-mono"
-    "font-jetbrains-mono-nerd-font"
-    "font-meslo-lg-nerd-font"
-    "font-roboto"
-    "font-source-code-pro"
+	"682658836" # GarageBand
+	"408981434" # iMovie
+	"361285480" # Keynote
+	"361304891" # Numbers
+	"361309726" # Pages
+	"497799835" # Xcode
 )

@@ -1,0 +1,56 @@
+# Starship Prompt — Minimal Clean
+
+format = """
+$directory$git_branch$git_status$nodejs$python$golang$rust$bun$cmd_duration
+$character"""
+
+add_newline = true
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+style = "bold cyan"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = ""
+style = "bold purple"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "red"
+format = "([$all_status]($style)) "
+
+[nodejs]
+symbol = ""
+style = "green"
+format = "[$symbol$version]($style) "
+
+[python]
+symbol = ""
+style = "yellow"
+format = "[$symbol$version]($style) "
+
+[golang]
+symbol = ""
+style = "blue"
+format = "[$symbol$version]($style) "
+
+[rust]
+symbol = ""
+style = "red"
+format = "[$symbol$version]($style) "
+
+[bun]
+style = "white"
+format = "[$version]($style) "
+
+[cmd_duration]
+min_time = 2000
+style = "gray"
+format = "[$duration]($style) "
+
+[character]
+success_symbol = "❯"
+error_symbol = "❯"
+vicmd_symbol = "❮"

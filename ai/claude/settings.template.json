@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(bun run *)",
+      "Bash(bun test *)",
+      "Bash(bunx biome *)",
+      "Bash(bunx vitest *)",
+      "Bash(bunx playwright *)",
+      "Bash(bunx tsc *)",
+      "Bash(bunx next *)",
+      "Bash(bunx mastra *)",
+      "Bash(bunx create-mastra *)",
+      "Bash(bunx drizzle-kit *)",
+      "Bash(bunx wrangler *)",
+      "Bash(bunx shadcn@latest *)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm add *)",
+      "Bash(pnpm remove *)",
+      "Bash(pnpm audit *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git checkout *)",
+      "Bash(git stash *)",
+      "Bash(git worktree *)",
+      "Bash(ls *)",
+      "Bash(cat package.json)",
+      "Bash(find src -name *)",
+      "Bash(wc -l *)",
+      "Bash(docker compose *)",
+      "Bash(docker ps *)",
+      "Bash(gh pr *)",
+      "Bash(gh issue *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push --force *)",
+      "Bash(git reset --hard *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(bun install *)",
+      "Bash(npm publish *)",
+      "Bash(pnpm publish *)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(.dev.vars)",
+      "Read(./secrets/**)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/auto-lint.sh",
+            "timeout": 30,
+            "statusMessage": "Running Biome auto-lint..."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/block-dangerous.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-context.sh",
+            "timeout": 15,
+            "statusMessage": "Loading project context..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/stop-verification.sh",
+            "timeout": 60,
+            "statusMessage": "Verifying work before stopping..."
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/stop-verification.sh",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}

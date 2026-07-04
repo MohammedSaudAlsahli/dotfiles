@@ -1,0 +1,98 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "opencode-gemini-auth",
+    "@slkiser/opencode-quota",
+    "speckit-opencode-plugin"
+  ],
+  "provider": {
+    "ollama": {
+      "name": "Ollama Cloud",
+      "npm": "@ai-sdk/openai-compatible",
+      "models": {
+        "glm-5:cloud": {
+          "name": "glm-5:cloud"
+        },
+        "qwen3-coder-next:cloud": {
+          "name": "qwen3-coder-next:cloud",
+          "limit": {
+            "context": 262144,
+            "output": 32768
+          }
+        },
+        "qwen3.5:cloud": {
+          "name": "qwen3.5:cloud"
+        }
+      },
+      "options": {
+        "baseURL": "https://ollama.com/v1",
+        "apiKey": "REPLACE_WITH_OLLAMA_API_KEY"
+      }
+    }
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "headers": {
+        "CONTEXT7_API_KEY": "REPLACE_WITH_CONTEXT7_API_KEY"
+      }
+    },
+    "github": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer REPLACE_WITH_GITHUB_TOKEN"
+      }
+    },
+    "stitch": {
+      "type": "remote",
+      "url": "https://stitch.googleapis.com/mcp",
+      "enabled": true,
+      "headers": {
+        "X-Goog-Api-Key": "REPLACE_WITH_STITCH_API_KEY"
+      }
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ]
+    },
+    "next-devtools": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "next-devtools-mcp@latest"
+      ]
+    },
+    "shadcn": {
+      "type": "local",
+      "command": [
+        "npx",
+        "shadcn@latest",
+        "mcp"
+      ]
+    },
+    "paper": {
+      "type": "remote",
+      "url": "http://127.0.0.1:29979/mcp",
+      "enabled": true
+    }
+  },
+  "disabled_providers": [],
+  "experimental": {
+    "quotaToast": {
+      "enableToast": true,
+      "showSessionTokens": true,
+      "enabledProviders": "auto",
+      "formatStyle": "allWindows",
+      "percentDisplayMode": "remaining"
+    }
+  }
+}

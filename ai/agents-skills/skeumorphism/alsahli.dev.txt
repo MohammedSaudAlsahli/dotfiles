@@ -1,0 +1,53 @@
+;;
+;; Domain:     alsahli.dev.
+;; Exported:   2026-03-27 07:16:20
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+alsahli.dev	3600	IN	SOA	ignacio.ns.cloudflare.com. dns.cloudflare.com. 2052626238 10000 2400 604800 3600
+
+;; NS Records
+alsahli.dev.	86400	IN	NS	ignacio.ns.cloudflare.com.
+alsahli.dev.	86400	IN	NS	mary.ns.cloudflare.com.
+
+;; A Records
+alsahli.dev.	1	IN	A	185.199.111.153 ; cf_tags=cf-proxied:false
+alsahli.dev.	1	IN	A	185.199.109.153 ; cf_tags=cf-proxied:false
+alsahli.dev.	1	IN	A	185.199.108.153 ; cf_tags=cf-proxied:false
+alsahli.dev.	1	IN	A	185.199.110.153 ; cf_tags=cf-proxied:false
+
+;; CNAME Records
+api.alsahli.dev.	1	IN	CNAME	mohammed-saud-alsahli.workers.dev. ; cf_tags=cf-proxied:true
+www.alsahli.dev.	1	IN	CNAME	mohammedsaudalsahli.github.io. ; cf_tags=cf-proxied:false
+
+;; MX Records
+alsahli.dev.	1	IN	MX	34 route3.mx.cloudflare.net.
+alsahli.dev.	1	IN	MX	86 route2.mx.cloudflare.net.
+alsahli.dev.	1	IN	MX	59 route1.mx.cloudflare.net.
+send.alsahli.dev.	3600	IN	MX	10 feedback-smtp.ap-northeast-1.amazonses.com.
+
+;; TXT Records
+alsahli.dev.	1	IN	TXT	"v=spf1 include:_spf.mx.cloudflare.net ~all"
+cf2024-1._domainkey.alsahli.dev.	1	IN	TXT	"v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiweykoi+o48IOGuP7GR3X0MOExCUDY/BCRHoWBnh3rChl7WhdyCxW3jgq1daEjPPqoi7sJvdg5hEQVsgVRQP4DcnQDVjGMbASQtrY4WmB1VebF+RPJB2ECPsEDTpeiI5ZyUAwJaVX7r6bznU67g7LvFq35yIo4sdlmtZGV+i0H4cpYH9+3JJ78k" "m4KXwaf9xUJCWF6nxeD+qG6Fyruw1Qlbds2r85U9dkNDVAS3gioCvELryh1TxKGiVTkg4wqHTyHfWsp7KD3WQHYJn0RyfJJu6YEmL77zonn7p2SRMvTMP3ZEXibnC9gz3nnhR6wcYL8Q7zXypKTMD58bTixDSJwIDAQAB"
+resend._domainkey.alsahli.dev.	3600	IN	TXT	"p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5xYJT3O+OEvzT6yQPxQ5MvXEwn+3+bCipozIUES3tX2s6umsOhx+TmVNTGz20nB2+dQqrE8JDtZbkk9moAI77cJsGtTPLV/iUYVDzzksEoIXRwYQJzN9e99nwXiiIa2HJ1SUdtR07vCiclXIk5Bgf41y5zIOUmnzoPrtjH0oNCwIDAQAB"
+send.alsahli.dev.	3600	IN	TXT	"v=spf1 include:amazonses.com -all"

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew upgrade:*)",
+      "Bash(du -sh /Applications/Xcode*.app)",
+      "Bash(brew cleanup:*)",
+      "Bash(pnpm store:*)",
+      "mcp__mcp-registry__search_mcp_registry"
+    ]
+  }
+}
