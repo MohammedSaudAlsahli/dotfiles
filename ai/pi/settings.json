@@ -1,0 +1,30 @@
+{
+  "lastChangelogVersion": "0.80.2",
+  "packages": [
+    "npm:@cleepi/git",
+    "npm:@ollama/pi-web-search",
+    "npm:pi-ollama-cloud",
+    "npm:pi-ocr",
+    "npm:pi-subagents",
+    "npm:pi-ask-user",
+    "npm:pi-crew",
+    "npm:pi-lens",
+    "npm:pi-markdown-preview",
+    "npm:pi-btw",
+    "npm:pi-studio",
+    "npm:pi-agent-browser-native",
+    "npm:pi-mcp-adapter",
+    "npm:@samfp/pi-memory",
+    "npm:pi-zentui",
+    "npm:@ayulab/oh-my-pi",
+    "npm:pi-comfy-ui",
+    "npm:pi-theme-picker",
+    "npm:pi-theme-synthwave-84",
+    "npm:pi-cmux-theme-picker",
+    "npm:@artale/pi-video"
+  ],
+  "defaultProvider": "ollama-cloud",
+  "defaultModel": "kimi-k2.7-code",
+  "defaultThinkingLevel": "xhigh",
+  "theme": "cmux-sync-catppuccin-frappe"
+}

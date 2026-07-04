@@ -102,10 +102,20 @@ ai_setup() {
         echo "🔗 ~/.config/opencode/skills -> ~/.agents/skills"
     fi
 
+    echo "  📁 ~/.pi/ configuration..."
+    mkdir -p "$HOME/.pi/agent"
+    link_file "$AI_DIR/pi/settings.json" "$HOME/.pi/agent/settings.json"
+    link_dir "$AI_DIR/pi/skills" "$HOME/.pi/agent/skills"
+    link_dir "$AI_DIR/pi/themes" "$HOME/.pi/agent/themes"
+    link_dir "$AI_DIR/pi/extensions" "$HOME/.pi/agent/extensions"
+
     echo "✅ AI tools setup complete! 🎉"
     echo ""
     echo "⚠️  REMEMBER: Run secrets setup next:"
     echo "   cp ~/.dotfiles/ai/secrets.env.example ~/.dotfiles/ai/secrets.env"
     echo "   # Fill in your API keys in secrets.env"
     echo "   source ~/.dotfiles/ai/secrets-setup.sh && secrets_setup"
+    echo ""
+    echo "⚠️  pi auth: copy your real auth.json to ~/.pi/agent/auth.json"
+    echo "   (see ~/.dotfiles/ai/pi/auth.json.example for format)"
 }

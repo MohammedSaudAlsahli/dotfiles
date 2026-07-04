@@ -42,3 +42,13 @@ mac-setup/home/config/neonctl/
 
 # OpenCode config with real API keys — use ai/opencode/opencode.json (redacted)
 mac-setup/home/config/opencode/opencode.json
+
+# pi-coding-agent auth — NEVER commit
+ai/pi/auth.json
+
+# pi node_modules (installed by pi install, not tracked)
+ai/pi/npm/
+ai/pi/cache/
+ai/pi/sessions/
+ai/pi/state/
+ai/pi/tmp/

@@ -1,0 +1,23 @@
+{
+  "autoSync": false,
+  "themeParams": {
+    "mutedWeight": 0.65,
+    "dimWeight": 0.45,
+    "borderWeight": 0.25,
+    "bgShift": 12,
+    "selectedBgFactor": 1,
+    "userMsgBgFactor": 0.7,
+    "toolPendingBgFactor": 0.4,
+    "toolSuccessTint": 0.88,
+    "toolErrorTint": 0.88,
+    "customMsgTint": 0.92,
+    "errorFallback": "#cc6666",
+    "successFallback": "#98c379",
+    "warningFallback": "#e5c07b",
+    "linkFallback": "#61afef",
+    "accentFallback": "#c678dd",
+    "accentAltFallback": "#56b6c2",
+    "linkContrastMin": 3
+  },
+  "previewDebounceMs": 200
+}
