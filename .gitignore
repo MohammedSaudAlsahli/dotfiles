@@ -24,3 +24,12 @@ mac-setup/brave
 ai/agents-skills/.DS_Store
 ai/claude/.DS_Store
 ai/secrets.env
+
+# npm lock files and build artifacts (cause Dependabot alerts)
+mac-setup/home/config/opencode/package-lock.json
+mac-setup/home/config/opencode/pnpm-lock.yaml
+mac-setup/home/config/opencode/node_modules/
+mac-setup/home/config/agents/skills/turnstile-spin/templates/worker/
+
+# Raycast compiled extensions (thousands of files, build artifacts)
+mac-setup/home/config/raycast/extensions/
