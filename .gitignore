@@ -33,3 +33,12 @@ mac-setup/home/config/agents/skills/turnstile-spin/templates/worker/
 
 # Raycast compiled extensions (thousands of files, build artifacts)
 mac-setup/home/config/raycast/extensions/
+
+# GCP credentials — NEVER commit
+mac-setup/home/config/gcloud/
+
+# Neon credentials — NEVER commit
+mac-setup/home/config/neonctl/
+
+# OpenCode config with real API keys — use ai/opencode/opencode.json (redacted)
+mac-setup/home/config/opencode/opencode.json
